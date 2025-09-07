@@ -13,7 +13,7 @@ const videoRouter = require('./routes/videoRouter');
 
 app.use(cors({
     // console.log("Hello"),
-    origin: 'http://localhost:5173',
+    origin: ['http://localhost:5173','https://coderclash.netlify.app'],
     credentials: true 
 }))
 
