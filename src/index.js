@@ -12,10 +12,11 @@ const AiRouter = require('./routes/SolverRoute');
 const videoRouter = require('./routes/videoRouter');
 
 app.use(cors({
-    // console.log("Hello"),
-    origin: ['http://localhost:5173','https://coderclash.netlify.app'],
-    credentials: true 
-}))
+    origin: ['http://localhost:5173', 'https://coderclash.netlify.app'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+}));
 
 app.use(express.json())
 app.use(cookieParser())
